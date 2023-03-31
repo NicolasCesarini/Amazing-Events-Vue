@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d5f2ab5ba4.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon"
+        href="https://w7.pngwing.com/pngs/253/892/png-transparent-computer-icons-calendar-date-event-table-calendar-text-rectangle.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/img/logo_amazing_events.png" class="main-logo" alt="Logo Amazing Events">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 botones-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./upcoming_events.html">Upcoming Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./past_events.html">Past Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./stats.html">Stats</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="app">
+    <main class="d-flex justify-content-center container-fluid mainDetails">
+        
+        <div class="details" id="details">
+            <figure class="details-figure">
+                <img :src="eventosAMostrar.image" class="details-img" alt="details-img">
+            </figure>
+            <article class="details-info">
+                <h2>{{eventosAMostrar.name}}</h2>
+                <p>{{eventosAMostrar.date}}</p>
+                <p>Description: {{eventosAMostrar.description}}</p>
+                <p>Category: {{eventosAMostrar.category}}</p>
+                <p>Capacity: {{eventosAMostrar.capacity}}</p>
+                <p>{{eventosAMostrar.assistance !== undefined ? "Assistance: " : "Assistance Estimate: "}}{{eventosAMostrar.assistance !== undefined ? eventosAMostrar.assistance : eventosAMostrar.estimate}}</p>
+                <p>Price: {{eventosAMostrar.price}}U$D</p>
+            </article>
+
+        </div>
+
+
+    
+
+    </main>
+</div>
+    <footer class="bg-secondary">
+        <ul class="list-group list-group-horizontal">
+            <a href="https://www.facebook.com/" target="_blank">
+                <li class="list-group-item"><i class="fa-brands fa-facebook fa-2xl" type="button"></i></li>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <li class="list-group-item"><i class="fa-brands fa-instagram fa-2xl"></i></li>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <li class="list-group-item"><i class="fa-brands fa-linkedin fa-2xl"></i></li>
+            </a>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/details.js"></script>
+
+
+
+
+</body>
+
+</html>
+
